@@ -12,4 +12,5 @@ const table = new Table(5, 5);
 
 readFile(path.resolve(fileName))
   .then((lines) => lines.map(parseAction))
-  .then((actions) => handleActions(table, actions));
+  .then((actions) => handleActions(table, actions))
+  .catch((error) => console.error('error: ', error));
