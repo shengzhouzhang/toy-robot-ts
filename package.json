@@ -5,12 +5,13 @@
   "author": "Steven Zhang <szhang@seek.com.au>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "start": "ts-node index.ts", 
     "test": "jest --coverage",
     "lint": "eslint 'src/**'",
     "format": "yarn lint --fix"
   },
   "dependencies": {
+    "ts-node": "8.10.1",
     "typescript": "3.8.3"
   },
   "devDependencies": {
