@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "target": "es2017",
+    "incremental": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "outDir": "dist",
+    "strictNullChecks": true,
+  },
+  "include": ["src"],
+}
