@@ -11,6 +11,6 @@ export const parseDirection = (text: string): Direction => {
     case 'EAST':
       return 'East';
     default:
-      throw new Error(`invalid direction: ${text}`);
+      throw new Error(`Invalid Direction: ${text}`);
   }
 };
