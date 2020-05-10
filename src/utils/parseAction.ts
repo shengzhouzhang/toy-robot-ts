@@ -7,8 +7,8 @@ export const parseAction = (text: string): Action => {
     case 'PLACE':
       return {
         kind: 'Place',
-        x: { kind: 'x', value: parseInt(args[1], 10) },
-        y: { kind: 'y', value: parseInt(args[2], 10) },
+        x: parseInt(args[1], 10),
+        y: parseInt(args[2], 10),
         direction: parseDirection(args[3]),
       };
     case 'MOVE':

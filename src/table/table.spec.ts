@@ -13,56 +13,56 @@ describe(`Table`, () => {
       ${-1} | ${-1} | ${false}
       ${5}  | ${5}  | ${false}
     `(`should return $expected if x=$x y=$y`, ({ x, y, expected }) => {
-      const result = table.isOnTable({ kind: 'x', value: x }, { kind: 'y', value: y });
+      const result = table.isOnTable(x, y);
       expect(result).toBe(expected);
     });
   });
 
   describe(`forwardX`, () => {
     test('should move forward on X dimension', () => {
-      const result = table.forwardX({ kind: 'x', value: 0 });
-      expect(result).toEqual({ kind: 'x', value: 1 });
+      const result = table.forwardX(0);
+      expect(result).toEqual(1);
     });
 
     test('should NOT move to outside of the table', () => {
-      const result = table.forwardX({ kind: 'x', value: 4 });
-      expect(result).toEqual({ kind: 'x', value: 4 });
+      const result = table.forwardX(4);
+      expect(result).toEqual(4);
     });
   });
 
   describe(`forwardY`, () => {
     test('should move forward on Y dimension', () => {
-      const result = table.forwardY({ kind: 'y', value: 0 });
-      expect(result).toEqual({ kind: 'y', value: 1 });
+      const result = table.forwardY(0);
+      expect(result).toEqual(1);
     });
 
     test('should NOT move to outside of the table', () => {
-      const result = table.forwardY({ kind: 'y', value: 4 });
-      expect(result).toEqual({ kind: 'y', value: 4 });
+      const result = table.forwardY(4);
+      expect(result).toEqual(4);
     });
   });
 
   describe(`backwardX`, () => {
     test('should move backward on X dimension', () => {
-      const result = table.backwardX({ kind: 'x', value: 4 });
-      expect(result).toEqual({ kind: 'x', value: 3 });
+      const result = table.backwardX(4);
+      expect(result).toEqual(3);
     });
 
     test('should NOT move to outside of the table', () => {
-      const result = table.backwardX({ kind: 'x', value: 0 });
-      expect(result).toEqual({ kind: 'x', value: 0 });
+      const result = table.backwardX(0);
+      expect(result).toEqual(0);
     });
   });
 
   describe(`backwardY`, () => {
     test('should move backward on Y dimension', () => {
-      const result = table.backwardY({ kind: 'y', value: 0 });
-      expect(result).toEqual({ kind: 'y', value: 0 });
+      const result = table.backwardY(0);
+      expect(result).toEqual(0);
     });
 
     test('should NOT move to outside of the table', () => {
-      const result = table.backwardY({ kind: 'y', value: 4 });
-      expect(result).toEqual({ kind: 'y', value: 3 });
+      const result = table.backwardY(4);
+      expect(result).toEqual(3);
     });
   });
 });

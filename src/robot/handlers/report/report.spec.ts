@@ -7,15 +7,15 @@ describe('handleReport', () => {
   test('should log robot status', () => {
     const result = handleReport({
       kind: 'OnTable',
-      x: { kind: 'x', value: 1 },
-      y: { kind: 'y', value: 2 },
+      x: 1,
+      y: 2,
       direction: 'North',
     });
 
     expect(result).toEqual({
       kind: 'OnTable',
-      x: { kind: 'x', value: 1 },
-      y: { kind: 'y', value: 2 },
+      x: 1,
+      y: 2,
       direction: 'North',
     });
 

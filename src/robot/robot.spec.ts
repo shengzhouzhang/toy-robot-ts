@@ -13,7 +13,7 @@ describe('robot', () => {
 
   test('should handle actions and report status', () => {
     const result = handleActions(table, [
-      { kind: 'Place', x: { kind: 'x', value: 1 }, y: { kind: 'y', value: 2 }, direction: 'East' },
+      { kind: 'Place', x: 1, y: 2, direction: 'East' },
       { kind: 'Move' },
       { kind: 'Left' },
       { kind: 'Move' },
@@ -23,8 +23,8 @@ describe('robot', () => {
 
     expect(result).toEqual({
       kind: 'OnTable',
-      x: { kind: 'x', value: 2 },
-      y: { kind: 'y', value: 3 },
+      x: 2,
+      y: 3,
       direction: 'East',
     });
 

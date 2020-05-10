@@ -15,15 +15,15 @@ describe('handleMove', () => {
     ({ x, direction, expected }) => {
       const result = handleMove(table, {
         kind: 'OnTable',
-        x: { kind: 'x', value: x },
-        y: { kind: 'y', value: 2 },
+        x,
+        y: 2,
         direction: direction,
       });
 
       expect(result).toEqual({
         kind: 'OnTable',
-        x: { kind: 'x', value: expected },
-        y: { kind: 'y', value: 2 },
+        x: expected,
+        y: 2,
         direction: direction,
       });
     },
@@ -40,15 +40,15 @@ describe('handleMove', () => {
     ({ y, direction, expected }) => {
       const result = handleMove(table, {
         kind: 'OnTable',
-        x: { kind: 'x', value: 2 },
-        y: { kind: 'y', value: y },
+        x: 2,
+        y,
         direction: direction,
       });
 
       expect(result).toEqual({
         kind: 'OnTable',
-        x: { kind: 'x', value: 2 },
-        y: { kind: 'y', value: expected },
+        x: 2,
+        y: expected,
         direction: direction,
       });
     },

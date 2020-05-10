@@ -1,12 +1,5 @@
-export type DimensionX = {
-  kind: 'x';
-  value: number;
-};
-
-export type DimensionY = {
-  kind: 'y';
-  value: number;
-};
+export type DimensionX = number;
+export type DimensionY = number;
 
 export class Table {
   private maxX: DimensionX;
@@ -15,35 +8,20 @@ export class Table {
   private minY: DimensionY;
 
   constructor(sizeX: number, sizeY: number) {
-    this.maxX = { kind: 'x', value: sizeX - 1 };
-    this.minX = { kind: 'x', value: 0 };
-    this.maxY = { kind: 'y', value: sizeY - 1 };
-    this.minY = { kind: 'y', value: 0 };
+    this.maxX = sizeX - 1;
+    this.minX = 0;
+    this.maxY = sizeY - 1;
+    this.minY = 0;
   }
 
   isOnTable = (x: DimensionX, y: DimensionY): boolean =>
-    x.value >= this.minX.value &&
-    x.value <= this.maxX.value &&
-    y.value >= this.minY.value &&
-    y.value <= this.maxY.value;
+    x >= this.minX && x <= this.maxX && y >= this.minY && y <= this.maxY;
 
-  forwardX = (x: DimensionX): DimensionX => ({
-    kind: 'x',
-    value: Math.min(x.value + 1, this.maxX.value),
-  });
+  forwardX = (x: DimensionX): DimensionX => Math.min(x + 1, this.maxX);
 
-  backwardX = (x: DimensionX): DimensionX => ({
-    kind: 'x',
-    value: Math.max(x.value - 1, this.minX.value),
-  });
+  backwardX = (x: DimensionX): DimensionX => Math.max(x - 1, this.minX);
 
-  forwardY = (y: DimensionY): DimensionY => ({
-    kind: 'y',
-    value: Math.min(y.value + 1, this.maxY.value),
-  });
+  forwardY = (y: DimensionY): DimensionY => Math.min(y + 1, this.maxY);
 
-  backwardY = (y: DimensionY): DimensionY => ({
-    kind: 'y',
-    value: Math.max(y.value - 1, this.minY.value),
-  });
+  backwardY = (y: DimensionY): DimensionY => Math.max(y - 1, this.minY);
 }
