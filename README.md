@@ -73,7 +73,8 @@ test/
 
 ##### Run unit tests with docker
 
-`docker build -t robot .` and then `docker run -it robot test`
+- `docker build -t robot .`
+- `docker run -it robot test`
 
 ### Run E2E Tests
 
@@ -83,9 +84,10 @@ test/
 
 ##### Run e2e tests with docker
 
-`docker build -t robot .` and then `docker run -it robot test:e2e`
+- `docker build -t robot .`
+- `docker run -it robot test:e2e`
 
 ### Run Program
 
-First, run `yarn` to install dependencies.
-Then, run `yarn start ./your-test-file`.
+- Run `yarn` to install dependencies.
+- Run `yarn start ./your-test-file`.
