@@ -90,4 +90,6 @@ test/
 ### Run Program
 
 - Run `yarn` to install dependencies.
-- Run `yarn start ./your-test-file`.
+- Run `yarn start ./your-commands-file`.
+
+e.g. `yarn start ./test/fixtures/example-a` -> `Output: 0,1,NORTH`
