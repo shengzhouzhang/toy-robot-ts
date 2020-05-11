@@ -49,16 +49,41 @@ type DimensionY = number;
 
 Directions are defined as types **North**, **South**, **West**, **East**.
 
+#### Files Overview
+
+```
+src/
+-- index.ts            // main entry file
+-- actions/            // action types
+-- robot/              // robot status and action handlers
+-- table/              // table type
+-- directions/         // direction types
+-- utils/              // util functions
+
+test/
+-- e2e.spec.ts     // e2e tests
+```
+
 ### Run Unit Tests
 
-First, run `yarn` to install dependencies.
-Then, run `yarn test` for unit testing.
+- Run `yarn` to install dependencies.
+- Run `yarn test` for unit testing.
 
 *Note: Unit test files are in `src` folder and named as `.spec.ts` next to the target file.*
 
 ##### Run unit tests with docker
 
 `docker build -t robot .` and then `docker run -it robot test`
+
+### Run E2E Tests
+
+- Run `yarn` to install dependencies
+- Run `brew install grep` to instal **grep** command on Mac
+- Run `yarn test:e2e` to run integration tests
+
+##### Run e2e tests with docker
+
+`docker build -t robot .` and then `docker run -it robot test:e2e`
 
 ### Run Program
 

@@ -1,14 +1,16 @@
 {
   "name": "toy-robot-ts",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.ts",
   "author": "Steven Zhang <szhang@seek.com.au>",
   "private": true,
   "scripts": {
     "build": "tsc",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "test": "jest",
-    "lint": "eslint 'src/**'",
+    "test": "jest src/**",
+    "test:e2e": "jest test/**",
+    "test:all": "yarn test && yarn test:e2e",
+    "lint": "eslint 'src/**' 'test/**'",
     "format": "yarn lint --fix"
   },
   "dependencies": {
