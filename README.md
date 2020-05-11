@@ -61,7 +61,7 @@ src/
 -- utils/              // util functions
 
 test/
--- e2e.spec.ts     // e2e tests
+-- e2e.spec.ts         // e2e tests
 ```
 
 ### Run Unit Tests
