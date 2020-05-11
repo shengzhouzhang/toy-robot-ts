@@ -29,7 +29,7 @@ describe('robot', () => {
     });
 
     expect(logger.info).toHaveBeenCalledTimes(1);
-    expect(logger.info).toHaveBeenCalledWith(2, 3, 'East');
+    expect(logger.info).toHaveBeenCalledWith('Output: 2,3,EAST');
   });
 
   test('should ignore actions, when the robot is out of the table', () => {

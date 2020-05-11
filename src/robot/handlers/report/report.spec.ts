@@ -20,6 +20,6 @@ describe('handleReport', () => {
     });
 
     expect(logger.info).toHaveBeenCalledTimes(1);
-    expect(logger.info).toHaveBeenCalledWith(1, 2, 'North');
+    expect(logger.info).toHaveBeenCalledWith('Output: 1,2,NORTH');
   });
 });

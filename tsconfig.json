@@ -10,5 +10,5 @@
     "outDir": "dist",
     "strictNullChecks": true,
   },
-  "include": ["src", "index.ts"],
+  "include": ["src"],
 }

@@ -9,4 +9,4 @@ export const readFile = (filePath: string): Promise<string[]> =>
       }
       resolve(data);
     });
-  }).then((context: string) => context.split(/\r?\n/));
+  }).then((context: string) => context.split(/\r?\n/).filter((line) => !!line));
