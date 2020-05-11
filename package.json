@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Steven Zhang <szhang@seek.com.au>",
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "start": "ts-node index.ts", 
-    "test": "jest --coverage",
+    "build": "tsc",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "test": "jest",
     "lint": "eslint 'src/**'",
     "format": "yarn lint --fix"
   },
   "dependencies": {
     "ts-node": "8.10.1",
+    "tsconfig-paths": "3.9.0",
     "typescript": "3.8.3"
   },
   "devDependencies": {

@@ -1,11 +1,11 @@
 import path from 'path';
 
-import { Table } from './table/table';
-import { handleActions } from './robot/robot';
-import { OnTable, OutOfTable } from './robot/status';
+import { Table } from 'src/table/table';
+import { handleActions } from 'src/robot/robot';
+import { OnTable, OutOfTable } from 'src/robot/status';
 
-import { readFile } from './utils/readFile';
-import { parseAction } from './utils/parseAction';
+import { readFile } from 'src/utils/readFile';
+import { parseAction } from 'src/utils/parseAction';
 
 export const runProgram = async (filePath: string): Promise<OnTable | OutOfTable> => {
   const table = new Table(5, 5);

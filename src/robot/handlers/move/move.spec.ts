@@ -1,5 +1,5 @@
+import { Table } from 'src/table/table';
 import { handleMove } from './move';
-import { Table } from '../../../table/table';
 
 describe('handleMove', () => {
   const table = new Table(5, 5);

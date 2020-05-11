@@ -1,7 +1,7 @@
-import { Table } from '../table/table';
-import { OnTable, OutOfTable } from './status';
+import { Table } from 'src/table/table';
+import { Action } from 'src/actions/actions';
 
-import { Action } from '../actions/actions';
+import { OnTable, OutOfTable } from './status';
 import { handlePlace, handleMove, handleLeft, handleRight, handleReport } from './handlers';
 
 export const handleActions = (table: Table, actions: Action[]): OnTable | OutOfTable =>

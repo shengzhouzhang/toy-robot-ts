@@ -1,7 +1,8 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  collectCoverage: false,
-  roots: ['src/'],
+  collectCoverage: true,
+  roots: ['.'],
+  modulePaths: ['.'],
   modulePathIgnorePatterns: ['./dist/'],
 };

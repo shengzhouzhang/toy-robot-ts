@@ -1,8 +1,9 @@
-import { handleActions } from './robot';
-import { Table } from '../table/table';
-import * as logger from '../utils/logger';
+import { Table } from 'src/table/table';
+import * as logger from 'src/utils/logger';
 
-jest.mock('../utils/logger');
+import { handleActions } from './robot';
+
+jest.mock('src/utils/logger');
 
 describe('robot', () => {
   const table = new Table(5, 5);

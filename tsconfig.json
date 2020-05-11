@@ -9,6 +9,7 @@
     "allowJs": false,
     "outDir": "dist",
     "strictNullChecks": true,
+    "baseUrl": "."
   },
   "include": ["src"],
 }

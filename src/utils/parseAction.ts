@@ -1,4 +1,4 @@
-import { Action } from '../actions/actions';
+import { Action } from 'src/actions/actions';
 import { parseDirection } from './parseDirection';
 
 export const parseAction = (text: string): Action => {

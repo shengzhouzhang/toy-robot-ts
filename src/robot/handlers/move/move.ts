@@ -1,5 +1,5 @@
-import { Table } from '../../../table/table';
-import { OnTable } from '../../status';
+import { Table } from 'src/table/table';
+import { OnTable } from 'src/robot/status';
 
 export const handleMove = (table: Table, { x, y, direction }: OnTable): OnTable => {
   switch (direction) {

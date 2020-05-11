@@ -1,5 +1,5 @@
-import { Direction } from '../directions/directions';
-import { DimensionX, DimensionY } from '../table/table';
+import { Direction } from 'src/directions/directions';
+import { DimensionX, DimensionY } from 'src/table/table';
 
 export type OnTable = {
   kind: 'OnTable';

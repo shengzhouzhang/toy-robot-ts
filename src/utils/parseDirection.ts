@@ -1,4 +1,4 @@
-import { Direction } from '../directions/directions';
+import { Direction } from 'src/directions/directions';
 
 export const parseDirection = (text: string): Direction => {
   switch (text) {

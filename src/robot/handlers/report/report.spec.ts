@@ -1,7 +1,7 @@
+import * as logger from 'src/utils/logger';
 import { handleReport } from './report';
-import * as logger from '../../../utils/logger';
 
-jest.mock('../../../utils/logger');
+jest.mock('src/utils/logger');
 
 describe('handleReport', () => {
   test('should log robot status', () => {
