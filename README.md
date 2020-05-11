@@ -79,7 +79,7 @@ test/
 
 - Run `yarn` to install dependencies
 - Run `brew install grep` to instal **grep** command on Mac
-- Run `yarn test:e2e` to run integration tests
+- Run `yarn test:e2e` to run e2e tests
 
 ##### Run e2e tests with docker
 
